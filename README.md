@@ -160,5 +160,4 @@ python -m pytest -q
 
 ## License
 
-Proprietary enterprise software. See the license agreement distributed with
-the organization account.
+Aetheris is licensed under the [Aetheris License v1.0](LICENSE): source-available, non-commercial, with attribution required. You may use, study, modify and share it for your own purposes, but the core, the Aetheris name and the author's credit may not be removed, and the software may not be sold without written permission.
