@@ -1,0 +1,117 @@
+name: ops-report
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "aetheris_ops/**"
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+
+      - name: Generate report
+        id: report
+        run: |
+          aetheris-ops report --out-md reports/latest.md --out-json reports/latest.json || true
+          python - <<'EOF'
+          import json
+          with open("reports/latest.json", encoding="utf-8") as handle:
+              payload = json.load(handle)
+          report = payload["report"]
+          print(f"score={report['score']}")
+          print(f"grade={report['grade']}")
+          print(f"optimizations={len(report['optimizations'])}")
+          print(f"updates={len(report['pending_updates'])}")
+          critical = [f for f in report["optimizations"] if f["severity"] == "critical"]
+          warning = [f for f in report["optimizations"] if f["severity"] == "warning"]
+          print(f"critical_count={len(critical)}")
+          print(f"warning_count={len(warning)}")
+          print("critical_titles=" + " | ".join(f["title"] for f in critical))
+          print("warning_titles=" + " | ".join(f["title"] for f in warning))
+          EOF
+
+      - name: Publish report badge
+        run: |
+          python - <<'EOF'
+          import json
+          with open("reports/latest.json", encoding="utf-8") as handle:
+              payload = json.load(handle)
+          score = payload["report"]["score"]
+          color = payload["color"]
+          badge = {"schemaVersion": 1, "label": "host score", "message": f"{score}/100", "color": color}
+          with open("reports/badge.json", "w", encoding="utf-8") as handle:
+              json.dump(badge, handle, indent=2)
+          EOF
+
+      - name: Commit report
+        run: |
+          git config user.name "aetheris-ops[bot]"
+          git config user.email "ops@aetheris.enterprise"
+          git add reports/
+          if git diff --cached --quiet; then
+            echo "No report changes."
+          else
+            git commit -m "chore: refresh ops report"
+            git push
+          fi
+
+      - name: Post job summary
+        run: |
+          cat reports/latest.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open issues for critical findings
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'EOF'
+          import json, os, subprocess, sys
+
+          with open("reports/latest.json", encoding="utf-8") as handle:
+              report = json.load(handle)["report"]
+
+          critical = [f for f in report["optimizations"] if f["severity"] == "critical"]
+          for finding in critical:
+              label = f"ops:{finding['id']}"
+              body = (
+                  f"### {finding['title']}\n\n"
+                  f"{finding['detail']}\n\n"
+                  f"```bash\n{finding['fix'] or 'manual review required'}\n```\n\n"
+                  f"Detected by `aetheris-ops` during the scheduled host scan."
+              )
+              search = subprocess.run(
+                  ["gh", "issue", "list", "--state", "open", "--label", label, "--json", "number"],
+                  capture_output=True, text=True, check=False,
+              )
+              existing = json.loads(search.stdout) if search.stdout else []
+              if existing:
+                  print(f"Issue for {label} already open (#{existing[0]['number']}).")
+                  continue
+              subprocess.run(
+                  ["gh", "issue", "create", "--title", f"[ops] {finding['title']}",
+                   "--body", body, "--label", label],
+                  check=True,
+              )
+              print(f"Opened issue for {label}.")
+          print("Issue sync complete.")
+          EOF

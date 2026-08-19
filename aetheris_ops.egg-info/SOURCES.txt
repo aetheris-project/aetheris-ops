@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+aetheris_ops/__init__.py
+aetheris_ops/__main__.py
+aetheris_ops/cli.py
+aetheris_ops/collectors.py
+aetheris_ops/optimizations.py
+aetheris_ops/report.py
+aetheris_ops/updates.py
+aetheris_ops.egg-info/PKG-INFO
+aetheris_ops.egg-info/SOURCES.txt
+aetheris_ops.egg-info/dependency_links.txt
+aetheris_ops.egg-info/entry_points.txt
+aetheris_ops.egg-info/top_level.txt
+tests/test_optimizations.py
+tests/test_report.py
+tests/test_updates.py

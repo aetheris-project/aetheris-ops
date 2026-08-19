@@ -1,0 +1,2 @@
+[console_scripts]
+aetheris-ops = aetheris_ops.cli:main
