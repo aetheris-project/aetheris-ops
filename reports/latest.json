@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "label": "host score",
+  "message": "90/100",
+  "color": "success",
+  "report": {
+    "scan_time": "2026-08-20 04:52:41 UTC",
+    "hostname": "runnervm76f27",
+    "platform": "Linux",
+    "score": 90,
+    "grade": "B",
+    "optimizations": [
+      {
+        "id": "ip-forward",
+        "severity": "info",
+        "title": "IPv4 forwarding is enabled",
+        "detail": "ip_forward=1 exposes the host as a router; only keep it on if network features need it.",
+        "fix": "sysctl -w net.ipv4.ip_forward=0 (if not needed)"
+      },
+      {
+        "id": "vm-swappiness",
+        "severity": "info",
+        "title": "Swappiness above recommended range",
+        "detail": "vm.swappiness is 60. Values 10-30 are typical for database and web workloads.",
+        "fix": "sysctl -w vm.swappiness=10"
+      },
+      {
+        "id": "thp",
+        "severity": "warning",
+        "title": "Transparent Huge Pages set to always",
+        "detail": "THP in 'always' mode can cause latency spikes on database and virtualized workloads.",
+        "fix": "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"
+      }
+    ],
+    "pending_updates": [
+      {
+        "package": "firefox",
+        "current": "153.0.4+build1-0ubuntu0.24.04.1~mt1",
+        "available": "1:1snap1-0ubuntu5",
+        "manager": "apt"
+      }
+    ]
+  }
+}
