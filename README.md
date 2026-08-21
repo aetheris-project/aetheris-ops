@@ -1,163 +1,211 @@
 <p align="center">
-  <img src="assets/icon.svg" alt="Aetheris Ops" width="88">
+  <img src="assets/icon.svg" alt="Aetheris Ops" width="88" style="filter: drop-shadow(0 0 20px rgba(245,158,11,0.55))">
 </p>
 
 <h1 align="center">Aetheris Ops</h1>
 
 <p align="center">
-  <strong>System optimization scanner and update manager for Aetheris hosts</strong>
+  <strong>Host health scanner, optimization advisor and rolling-update reporter for Aetheris nodes</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python 3.10+">
-  <img src="https://img.shields.io/badge/Linux-macOS-Windows-2ea44f" alt="Linux / macOS / Windows">
-  <img src="https://img.shields.io/badge/stdlib-only-18181B" alt="stdlib only">
-  <img src="https://img.shields.io/badge/tests-passing-success" alt="Tests passing">
-  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Faetheris-project%2Faetheris-ops%2Fmain%2Freports%2Fbadge.json" alt="Host score">
+  <a href="https://aetheris-docs.vercel.app/wiki/monitoring"><img src="https://img.shields.io/badge/Docs-Monitoring-0EA5E9?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Docs"></a>
+  <a href="https://github.com/aetheris-project/aetheris-ops/actions/workflows/ops-report.yml"><img src="https://img.shields.io/badge/CI-Daily%20Scan-F59E0B?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI"></a>
+  <a href="https://discord.gg/6GcfebuT2A"><img src="https://img.shields.io/badge/Discord-Help-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Linux-macOS--Windows-2ea44f?style=flat-square" alt="Cross-platform">
+  <img src="https://img.shields.io/badge/Stdlib--Only-0%20Deps-18181B?style=flat-square" alt="Zero deps">
+  <img src="https://img.shields.io/badge/Read--Only-Safe-10B981?style=flat-square" alt="Safe">
+  <img src="https://img.shields.io/badge/Tests-Passing-10B981?style=flat-square" alt="Tests">
+  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Faetheris-project%2Faetheris-ops%2Fmain%2Freports%2Fbadge.json&style=flat-square" alt="Score">
 </p>
 
 ---
 
-A pure standard-library Python tool that scans the machine running the
-Aetheris platform, detects optimization opportunities across the kernel,
-memory, disk, CPU and services, tracks pending package updates, and
-publishes everything to GitHub - as a live report, a status badge and
-auto-opened issues for critical findings.
+<br>
 
-No third-party dependencies, no root required for scanning, and it never
-applies changes by itself: it tells you what to do and why.
+> **Pure standard-library Python host inspector** that scans the machine running
+> the Aetheris control plane, grades it with a single 0-100 health score,
+> surfaces kernel / memory / disk / networking optimization opportunities,
+> detects pending package updates across distros, and publishes everything
+> automatically — a shields.io badge, a Markdown report and deduplicated
+> GitHub issues for every critical finding.
+>
+> **Read-only by design.** Scanning requires no privileges, no third-party
+> packages, and the tool never modifies system state.
 
-## Features
+<br>
 
-- **Health score**: a single 0-100 score with an A-F grade, computed from
-  weighted optimization findings.
-- **Optimization rules**: swappiness, memory pressure, swap usage, disk
-  fill, transparent huge pages, TCP congestion control, IPv4 forwarding,
-  dirty pages, load vs. cores, CPU governor and unbounded journald.
-- **Update management**: detects pending updates through the native package
-  manager - `apt` on Debian/Ubuntu, Homebrew on macOS, `winget` on Windows.
-- **GitHub vision**: scheduled GitHub Actions run the scan, refresh a
-  shields.io endpoint badge, post the report to the workflow summary and
-  open (deduplicated) issues labeled `ops:*` for every critical finding.
-- **Cross-platform and safe**: every collector degrades to `None` instead of
-  raising, scanning needs no privileges, and the tool only reads - it never
-  writes system state.
+## ✨ Features
 
-## Installation
+<table>
+  <tr>
+    <td width="33%" align="center" valign="top">
+      <h3>💯 Health score</h3>
+      <p>Single 0-100 grade with A-F letter class, weighted across kernel, memory, disk, load and update findings.</p>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <h3>🧠 11+ rules</h3>
+      <p>swappiness · THP · TCP BBR · vm.dirty_ratio · load/cores · CPU governor · journald sizing · disk fill · swap pressure</p>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <h3>🔄 Update tracker</h3>
+      <p>
+        🐧 apt (Debian/Ubuntu)<br>
+        🍎 Homebrew (macOS)<br>
+        🪟 winget (Windows)
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <h3>📡 GitHub vision</h3>
+      <p>Scheduled Actions refresh the live badge, post the report to job summary and open dedup'd issues labeled <code>ops:*</code>.</p>
+    </td>
+    <td align="center" valign="top">
+      <h3>🛡️ Read-only</h3>
+      <p>Every collector degrades gracefully to <code>None</code>. Scanning never writes, never roots, never raises.</p>
+    </td>
+    <td align="center" valign="top">
+      <h3>📝 Multi-format</h3>
+      <p>Human-readable Markdown, machine JSON, shield endpoint compatible with shields.io <code>endpoint</code>.</p>
+    </td>
+  </tr>
+</table>
 
-The tool has no third-party runtime dependencies - only Python 3.10+.
+<br>
+
+## 🚀 Quick Start
 
 ```bash
+# 1. Clone (or just grab aetheris_ops/ — no deps required)
+git clone https://github.com/aetheris-project/aetheris-ops && cd aetheris-ops
+
+# 2. Optional editable install (adds the `aetheris-ops` CLI)
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
+# Linux / macOS
+source .venv/bin/activate
+# Windows PowerShell
+# .venv\Scripts\activate
 pip install -e .
-```
 
-## Usage
-
-Quick health summary:
-
-```bash
+# 3. One-shot health summary
 aetheris-ops check
-```
 
-Full report written to files:
-
-```bash
-aetheris-ops report --out-md reports/latest.md --out-json reports/latest.json
-```
-
-Print the report to stdout (markdown or JSON):
-
-```bash
+# 4. Full report (stdout + files + badge JSON)
 aetheris-ops report --markdown
-aetheris-ops report --json
-```
+aetheris-ops report --out-md reports/latest.md --out-json reports/latest.json
 
-List pending package updates:
-
-```bash
+# 5. Pending updates only
 aetheris-ops updates
-```
 
-Skip update detection in restricted environments:
-
-```bash
+# 6. Skip update check (restricted / offline runners)
 aetheris-ops check --no-updates
 ```
 
 ### Exit codes
 
 | Code | Meaning |
-| --- | --- |
-| `0` | Host is clean (no warnings, no criticals, no pending updates) |
-| `1` | Warnings detected and/or pending updates |
-| `2` | Critical findings detected |
+|---|---|
+| <kbd>0</kbd> | Clean — no warnings, no criticals, no pending updates |
+| <kbd>1</kbd> | Warnings and/or pending updates present |
+| <kbd>2</kbd> | Critical findings — review immediately |
 
-## GitHub automation
+<br>
 
-The repository ships a scheduled workflow (`.github/workflows/ops-report.yml`)
-that runs daily at 04:17 UTC and on every push touching the scanner. Each
-run:
+## ⚙️ Rules Reference
 
-1. Installs the package and generates `reports/latest.md` and
-   `reports/latest.json` on the runner.
-2. Commits any changes back to `main`, keeping the report and the
-   `reports/badge.json` shield endpoint fresh.
-3. Appends the markdown report to the Actions job summary.
-4. Opens a GitHub issue for every critical finding, labeled `ops:<rule-id>`
-   - existing open issues for the same rule are never duplicated.
+| Rule ID | Trigger (info / warn / critical) | Suggested fix |
+|---|---|---|
+| `vm-swappiness` | `> 30` info · `> 60` warn | `sysctl -w vm.swappiness=10` |
+| `mem-pressure` | `< 20%` warn · `< 10%` critical | Review workloads / add RAM |
+| `swap-pressure` | `> 80%` swap used — warn | Reassess memory sizing |
+| `disk-full` | `> 80%` warn · `> 92%` critical | Prune logs, images, backups |
+| `thp` | Transparent HugePages `always` | `echo madvise > /sys/kernel/mm/transparent_hugepage/enabled` |
+| `tcp-cc` | Non-default congestion control — info | Consider `tcp_bbr` |
+| `ip-forward` | `net.ipv4.ip_forward=1` — info | Disable unless routing / KVM |
+| `vm-dirty-ratio` | `> 30` info | `sysctl -w vm.dirty_ratio=20` |
+| `load` | load/cores `> 1` info · `> 2` warn | Rebalance workloads across nodes |
+| `cpu-governor` | Non-performance governor — info | `cpupower frequency-set -g performance` |
+| `journald-size` | `SystemMaxUse=0` unbounded — info | Set `SystemMaxUse=500M` in `journald.conf` |
 
-The badge at the top of this README renders the last reported score from
-the committed `reports/badge.json`.
+<br>
 
-To run the same scan on the actual production host and publish it, run:
+## 🔁 GitHub Automation
+
+`.github/workflows/ops-report.yml` runs **daily at 04:17 UTC** and on every push touching the scanner. On each run:
+
+1. The package is installed and `aetheris-ops report` regenerates `reports/latest.md`, `reports/latest.json` and `reports/badge.json`.
+2. Changes are committed back to `main` — the top-of-readme score badge always reflects the last run.
+3. The Markdown report is appended to the **GitHub Actions job summary**.
+4. A deduplicated issue labeled `ops:<rule-id>` is opened per critical finding. Open issues for the same rule are never duplicated.
+
+To publish the scan of a **production host** instead of the runner:
 
 ```bash
 aetheris-ops report --out-md reports/latest.md --out-json reports/latest.json
-git add reports/ && git commit -m "chore: refresh ops report" && git push
+git add reports/
+git commit -m "chore(ops): refresh production host report"
+git push
 ```
 
-## Rules reference
+<br>
 
-| Rule id | Severity trigger | Suggested fix |
-| --- | --- | --- |
-| `vm-swappiness` | `> 30` info, `> 60` warning | `sysctl -w vm.swappiness=10` |
-| `mem-pressure` | `< 20%` warning, `< 10%` critical | review workloads / add RAM |
-| `swap-pressure` | `> 80%` swap used | review memory pressure |
-| `disk-full` | `> 80%` warning, `> 92%` critical | prune logs, images, backups |
-| `thp` | THP `always` | `echo madvise > /sys/kernel/mm/transparent_hugepage/enabled` |
-| `tcp-cc` | non-default congestion control | consider BBR |
-| `ip-forward` | `ip_forward=1` (info) | disable if not needed |
-| `vm-dirty-ratio` | `> 30` (info) | `sysctl -w vm.dirty_ratio=20` |
-| `load` | load/cores `> 1` info, `> 2` warning | rebalance workloads |
-| `cpu-governor` | non-performance governor (info) | `cpupower frequency-set -g performance` |
-| `journald-size` | `SystemMaxUse=0` | set `SystemMaxUse=500M` |
-
-## Repository layout
+## 🧩 Repository Layout
 
 ```text
 aetheris-ops/
 ├── aetheris_ops/
-│   ├── cli.py            # argparse entry point
-│   ├── collectors.py     # system metrics (stdlib only)
-│   ├── optimizations.py  # rules engine + scoring
-│   ├── updates.py        # apt / brew / winget detection
-│   └── report.py         # markdown + JSON (shields endpoint) renderers
+│   ├── cli.py             # argparse entrypoint (aetheris-ops check|report|updates)
+│   ├── collectors.py      # sysfs / proc / psutil-free metric collection (stdlib only)
+│   ├── optimizations.py   # 11-rule engine + weighted A-F scoring
+│   ├── updates.py         # apt / brew / winget pending-update detectors
+│   ├── report.py          # Markdown · JSON · shields-endpoint renderers
+│   └── __main__.py
 ├── .github/workflows/
-│   └── ops-report.yml    # scheduled scan, badge, issues
-├── reports/              # generated report + badge (committed)
-├── tests/                # unit tests
+│   └── ops-report.yml     # Scheduled daily scan → badge + report + issues
+├── reports/               # ⚡ committed output: latest.md · latest.json · badge.json
+├── tests/                 # Scoring, ranking, dedup, exit-code tests
 └── pyproject.toml
 ```
 
-## Tests
+<br>
+
+## 🧪 Tests
 
 ```bash
 python -m pip install pytest
 python -m pytest -q
 ```
 
-## License
+Suite covers: scoring math and grade boundaries, rule severity thresholds,
+report formatting, exit-code mapping, issue dedup keys.
 
-Aetheris is licensed under the [GNU Affero General Public License v3.0](LICENSE.md) (AGPL-3.0). You may use, study, modify and redistribute it for any purpose, provided that any distributed or network-served modified version keeps this license, preserves the copyright notice of the original author (Leonardo Galli / Leo-Galli) and releases its source code under AGPL-3.0. The Aetheris core and the author's credit may not be removed.
+---
+
+<p align="center">
+  <strong>Made with 💚 by <a href="https://github.com/Leo-Galli">Leonardo Galli</a></strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/aetheris-project/aetheris-app">App</a>
+  ·
+  <a href="https://github.com/aetheris-project/aetheris-docs">Docs</a>
+  ·
+  <a href="https://github.com/aetheris-project/aetheris-installer">Installer</a>
+  ·
+  <a href="https://discord.gg/6GcfebuT2A">Discord</a>
+  ·
+  <a href="https://paypal.me/LeonardoGalliITA">Donate</a>
+</p>
+
+## 📄 License
+
+Licensed under **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+See [LICENSE.md](LICENSE.md). You may use, study, modify and redistribute
+for any purpose provided distributed or network-served modified versions
+keep this license, preserve Leonardo Galli's copyright notice and release
+source under AGPL-3.0. The Aetheris core and author credit may not be removed.
