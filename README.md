@@ -1,26 +1,26 @@
 <p align="center">
-  <img src="assets/icon.svg" alt="Aetheris Ops" width="88" style="filter: drop-shadow(0 0 20px rgba(245,158,11,0.55))">
+ <img src="assets/icon.svg" alt="Aetheris Ops" width="88" style="filter: drop-shadow(0 0 20px rgba(245,158,11,0.55))">
 </p>
 
 <h1 align="center">Aetheris Ops</h1>
 
 <p align="center">
-  <strong>Host health scanner, optimization advisor and rolling-update reporter for Aetheris nodes</strong>
+ <strong>Host health scanner, optimization advisor and rolling-update reporter for Aetheris nodes</strong>
 </p>
 
 <p align="center">
-  <a href="https://aetheris-docs.vercel.app/wiki/monitoring"><img src="https://img.shields.io/badge/Docs-Monitoring-0EA5E9?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Docs"></a>
-  <a href="https://github.com/aetheris-project/aetheris-ops/actions/workflows/ops-report.yml"><img src="https://img.shields.io/badge/CI-Daily%20Scan-F59E0B?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI"></a>
-  <a href="https://discord.gg/6GcfebuT2A"><img src="https://img.shields.io/badge/Discord-Help-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+ <a href="https://aetheris-docs.vercel.app/wiki/monitoring"><img src="https://img.shields.io/badge/Docs-Monitoring-0EA5E9?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Docs"></a>
+ <a href="https://github.com/aetheris-project/aetheris-ops/actions/workflows/ops-report.yml"><img src="https://img.shields.io/badge/CI-Daily%20Scan-F59E0B?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI"></a>
+ <a href="https://discord.gg/6GcfebuT2A"><img src="https://img.shields.io/badge/Discord-Help-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Linux-macOS--Windows-2ea44f?style=flat-square" alt="Cross-platform">
-  <img src="https://img.shields.io/badge/Stdlib--Only-0%20Deps-18181B?style=flat-square" alt="Zero deps">
-  <img src="https://img.shields.io/badge/Read--Only-Safe-10B981?style=flat-square" alt="Safe">
-  <img src="https://img.shields.io/badge/Tests-Passing-10B981?style=flat-square" alt="Tests">
-  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Faetheris-project%2Faetheris-ops%2Fmain%2Freports%2Fbadge.json&style=flat-square" alt="Score">
+ <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+ <img src="https://img.shields.io/badge/Linux-macOS--Windows-2ea44f?style=flat-square" alt="Cross-platform">
+ <img src="https://img.shields.io/badge/Stdlib--Only-0%20Deps-18181B?style=flat-square" alt="Zero deps">
+ <img src="https://img.shields.io/badge/Read--Only-Safe-10B981?style=flat-square" alt="Safe">
+ <img src="https://img.shields.io/badge/Tests-Passing-10B981?style=flat-square" alt="Tests">
+ <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Faetheris-project%2Faetheris-ops%2Fmain%2Freports%2Fbadge.json&style=flat-square" alt="Score">
 </p>
 
 ---
@@ -39,46 +39,46 @@
 
 <br>
 
-## ✨ Features
+## Features
 
 <table>
-  <tr>
-    <td width="33%" align="center" valign="top">
-      <h3>💯 Health score</h3>
-      <p>Single 0-100 grade with A-F letter class, weighted across kernel, memory, disk, load and update findings.</p>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <h3>🧠 11+ rules</h3>
-      <p>swappiness · THP · TCP BBR · vm.dirty_ratio · load/cores · CPU governor · journald sizing · disk fill · swap pressure</p>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <h3>🔄 Update tracker</h3>
-      <p>
-        🐧 apt (Debian/Ubuntu)<br>
-        🍎 Homebrew (macOS)<br>
-        🪟 winget (Windows)
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <h3>📡 GitHub vision</h3>
-      <p>Scheduled Actions refresh the live badge, post the report to job summary and open dedup'd issues labeled <code>ops:*</code>.</p>
-    </td>
-    <td align="center" valign="top">
-      <h3>🛡️ Read-only</h3>
-      <p>Every collector degrades gracefully to <code>None</code>. Scanning never writes, never roots, never raises.</p>
-    </td>
-    <td align="center" valign="top">
-      <h3>📝 Multi-format</h3>
-      <p>Human-readable Markdown, machine JSON, shield endpoint compatible with shields.io <code>endpoint</code>.</p>
-    </td>
-  </tr>
+ <tr>
+ <td width="33%" align="center" valign="top">
+ <h3> Health score</h3>
+ <p>Single 0-100 grade with A-F letter class, weighted across kernel, memory, disk, load and update findings.</p>
+ </td>
+ <td width="33%" align="center" valign="top">
+ <h3> 11+ rules</h3>
+ <p>swappiness · THP · TCP BBR · vm.dirty_ratio · load/cores · CPU governor · journald sizing · disk fill · swap pressure</p>
+ </td>
+ <td width="33%" align="center" valign="top">
+ <h3> Update tracker</h3>
+ <p>
+ apt (Debian/Ubuntu)<br>
+ Homebrew (macOS)<br>
+ winget (Windows)
+ </p>
+ </td>
+ </tr>
+ <tr>
+ <td align="center" valign="top">
+ <h3> GitHub vision</h3>
+ <p>Scheduled Actions refresh the live badge, post the report to job summary and open dedup'd issues labeled <code>ops:*</code>.</p>
+ </td>
+ <td align="center" valign="top">
+ <h3> Read-only</h3>
+ <p>Every collector degrades gracefully to <code>None</code>. Scanning never writes, never roots, never raises.</p>
+ </td>
+ <td align="center" valign="top">
+ <h3> Multi-format</h3>
+ <p>Human-readable Markdown, machine JSON, shield endpoint compatible with shields.io <code>endpoint</code>.</p>
+ </td>
+ </tr>
 </table>
 
 <br>
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone (or just grab aetheris_ops/ — no deps required)
@@ -116,7 +116,7 @@ aetheris-ops check --no-updates
 
 <br>
 
-## ⚙️ Rules Reference
+## Rules Reference
 
 | Rule ID | Trigger (info / warn / critical) | Suggested fix |
 |---|---|---|
@@ -134,7 +134,7 @@ aetheris-ops check --no-updates
 
 <br>
 
-## 🔁 GitHub Automation
+## GitHub Automation
 
 `.github/workflows/ops-report.yml` runs **daily at 04:17 UTC** and on every push touching the scanner. On each run:
 
@@ -154,27 +154,27 @@ git push
 
 <br>
 
-## 🧩 Repository Layout
+## Repository Layout
 
 ```text
 aetheris-ops/
 ├── aetheris_ops/
-│   ├── cli.py             # argparse entrypoint (aetheris-ops check|report|updates)
-│   ├── collectors.py      # sysfs / proc / psutil-free metric collection (stdlib only)
-│   ├── optimizations.py   # 11-rule engine + weighted A-F scoring
-│   ├── updates.py         # apt / brew / winget pending-update detectors
-│   ├── report.py          # Markdown · JSON · shields-endpoint renderers
-│   └── __main__.py
+│ ├── cli.py # argparse entrypoint (aetheris-ops check|report|updates)
+│ ├── collectors.py # sysfs / proc / psutil-free metric collection (stdlib only)
+│ ├── optimizations.py # 11-rule engine + weighted A-F scoring
+│ ├── updates.py # apt / brew / winget pending-update detectors
+│ ├── report.py # Markdown · JSON · shields-endpoint renderers
+│ └── __main__.py
 ├── .github/workflows/
-│   └── ops-report.yml     # Scheduled daily scan → badge + report + issues
-├── reports/               # ⚡ committed output: latest.md · latest.json · badge.json
-├── tests/                 # Scoring, ranking, dedup, exit-code tests
+│ └── ops-report.yml # Scheduled daily scan → badge + report + issues
+├── reports/ # committed output: latest.md · latest.json · badge.json
+├── tests/ # Scoring, ranking, dedup, exit-code tests
 └── pyproject.toml
 ```
 
 <br>
 
-## 🧪 Tests
+## Tests
 
 ```bash
 python -m pip install pytest
@@ -187,22 +187,22 @@ report formatting, exit-code mapping, issue dedup keys.
 ---
 
 <p align="center">
-  <strong>Made with 💚 by <a href="https://github.com/Leo-Galli">Leonardo Galli</a></strong>
+ <strong>Made with care by <a href="https://github.com/Leo-Galli">Leonardo Galli</a></strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/aetheris-project/aetheris-app">App</a>
-  ·
-  <a href="https://github.com/aetheris-project/aetheris-docs">Docs</a>
-  ·
-  <a href="https://github.com/aetheris-project/aetheris-installer">Installer</a>
-  ·
-  <a href="https://discord.gg/6GcfebuT2A">Discord</a>
-  ·
-  <a href="https://paypal.me/LeonardoGalliITA">Donate</a>
+ <a href="https://github.com/aetheris-project/aetheris-app">App</a>
+ ·
+ <a href="https://github.com/aetheris-project/aetheris-docs">Docs</a>
+ ·
+ <a href="https://github.com/aetheris-project/aetheris-installer">Installer</a>
+ ·
+ <a href="https://discord.gg/6GcfebuT2A">Discord</a>
+ ·
+ <a href="https://paypal.me/LeonardoGalliITA">Donate</a>
 </p>
 
-## 📄 License
+## License
 
 Licensed under **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 See [LICENSE.md](LICENSE.md). You may use, study, modify and redistribute
