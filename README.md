@@ -9,9 +9,29 @@
 </p>
 
 <p align="center">
- <a href="https://aetheris-docs.vercel.app/wiki/monitoring"><img src="https://img.shields.io/badge/Docs-Monitoring-0EA5E9?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Docs"></a>
- <a href="https://github.com/aetheris-project/aetheris-ops/actions/workflows/ops-report.yml"><img src="https://img.shields.io/badge/CI-Daily%20Scan-F59E0B?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI"></a>
- <a href="https://discord.gg/6GcfebuT2A"><img src="https://img.shields.io/badge/Discord-Help-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+ <a href="https://github.com/aetheris-project/aetheris-app">App</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-docs">Docs</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-website">Website</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-addons">Addons</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-themes">Themes</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-game-eggs">Game Eggs</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-windows-installer">Windows Installer</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-installer">Installer</a>
+ |
+ <a href="https://github.com/aetheris-project/aetheris-ops">Ops</a>
+ |
+ <a href="https://aetheris-status.vercel.app">Status</a>
+ |
+ <a href="https://discord.gg/6GcfebuT2A">Discord</a>
+ |
+ <a href="https://paypal.me/LeonardoGalliITA">Donate</a>
 </p>
 
 <p align="center">
