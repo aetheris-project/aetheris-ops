@@ -29,6 +29,7 @@
  |
  <a href="https://aetheris-status.vercel.app">Status</a>
  |
+ <a href="https://github.com/aetheris-project/aetheris-android">Android</a>
  <a href="https://discord.gg/6GcfebuT2A">Discord</a>
  |
  <a href="https://paypal.me/LeonardoGalliITA">Donate</a>
