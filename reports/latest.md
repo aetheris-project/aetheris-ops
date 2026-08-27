@@ -1,10 +1,10 @@
 # Aetheris host report
 
-Scan time: 2026-08-26 04:55:41 UTC
+Scan time: 2026-08-27 15:14:27 UTC
 
 ## Host
 
-- Hostname: `runnervm76f27`
+- Hostname: `runnervmgx7h7`
 - Platform: `Linux 6.17.0-1022-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
@@ -26,7 +26,7 @@ Scan time: 2026-08-26 04:55:41 UTC
 
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
-| apt | firefox | 153.0.4+build1-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
+| apt | firefox | 154.0+build1-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
 
 ---
 
