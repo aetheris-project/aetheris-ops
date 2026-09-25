@@ -1,10 +1,10 @@
 # Aetheris host report
 
-Scan time: 2026-09-24 09:18:13 UTC
+Scan time: 2026-09-25 09:36:12 UTC
 
 ## Host
 
-- Hostname: `runnervmlun5p`
+- Hostname: `runnervmtr4k5`
 - Platform: `Linux 6.17.0-1022-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
@@ -26,7 +26,7 @@ Scan time: 2026-09-24 09:18:13 UTC
 
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
-| apt | firefox | 155.0+build1-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
+| apt | firefox | 156.0+build1-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
 
 ---
 

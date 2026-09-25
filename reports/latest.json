@@ -4,8 +4,8 @@
   "message": "90/100",
   "color": "success",
   "report": {
-    "scan_time": "2026-09-24 09:18:13 UTC",
-    "hostname": "runnervmlun5p",
+    "scan_time": "2026-09-25 09:36:12 UTC",
+    "hostname": "runnervmtr4k5",
     "platform": "Linux",
     "score": 90,
     "grade": "B",
@@ -35,7 +35,7 @@
     "pending_updates": [
       {
         "package": "firefox",
-        "current": "155.0+build1-0ubuntu0.24.04.1~mt1",
+        "current": "156.0+build1-0ubuntu0.24.04.1~mt1",
         "available": "1:1snap1-0ubuntu5",
         "manager": "apt"
       }
