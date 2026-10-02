@@ -1,10 +1,10 @@
 # Aetheris host report
 
-Scan time: 2026-10-01 10:56:32 UTC
+Scan time: 2026-10-02 10:29:44 UTC
 
 ## Host
 
-- Hostname: `runnervmtr4k5`
+- Hostname: `runnervm8df0l`
 - Platform: `Linux 6.17.0-1022-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
@@ -27,6 +27,11 @@ Scan time: 2026-10-01 10:56:32 UTC
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
 | apt | firefox | 156.0+build1-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
+| apt | linux-azure | 6.17.0-1022.22 | 7.0.0-1014.14~24.04.1 |
+| apt | linux-cloud-tools-azure | 6.17.0-1022.22 | 7.0.0-1014.14~24.04.1 |
+| apt | linux-headers-azure | 6.17.0-1022.22 | 7.0.0-1014.14~24.04.1 |
+| apt | linux-image-azure | 6.17.0-1022.22 | 7.0.0-1014.14~24.04.1 |
+| apt | linux-tools-azure | 6.17.0-1022.22 | 7.0.0-1014.14~24.04.1 |
 
 ---
 
