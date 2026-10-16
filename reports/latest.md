@@ -1,10 +1,10 @@
 # Aetheris host report
 
-Scan time: 2026-10-15 09:08:07 UTC
+Scan time: 2026-10-16 09:00:57 UTC
 
 ## Host
 
-- Hostname: `runnervmmprz5`
+- Hostname: `runnervm8k3b6`
 - Platform: `Linux 6.17.0-1022-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
