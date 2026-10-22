@@ -1,18 +1,18 @@
 # Aetheris host report
 
-Scan time: 2026-10-21 09:21:20 UTC
+Scan time: 2026-10-22 09:23:55 UTC
 
 ## Host
 
-- Hostname: `runnervm8k3b6`
-- Platform: `Linux 6.17.0-1022-azure` (`x86_64`)
+- Hostname: `runnervmxehtw`
+- Platform: `Linux 7.0.0-1017-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
 - Python: 3.12.15
 
 ## Score
 
-**90/100** (grade B)
+**100/100** (grade A)
 
 ## Optimizations
 
@@ -20,18 +20,12 @@ Scan time: 2026-10-21 09:21:20 UTC
 | --- | --- | --- | --- |
 | info | IPv4 forwarding is enabled | ip_forward=1 exposes the host as a router; only keep it on if network features need it. | `sysctl -w net.ipv4.ip_forward=0 (if not needed)` |
 | info | Swappiness above recommended range | vm.swappiness is 60. Values 10-30 are typical for database and web workloads. | `sysctl -w vm.swappiness=10` |
-| warning | Transparent Huge Pages set to always | THP in 'always' mode can cause latency spikes on database and virtualized workloads. | `echo madvise > /sys/kernel/mm/transparent_hugepage/enabled` |
 
 ## Pending updates
 
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
-| apt | firefox | 157.0+build1-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
-| apt | linux-azure | 6.17.0-1022.22 | 7.0.0-1017.17~24.04.1 |
-| apt | linux-cloud-tools-azure | 6.17.0-1022.22 | 7.0.0-1017.17~24.04.1 |
-| apt | linux-headers-azure | 6.17.0-1022.22 | 7.0.0-1017.17~24.04.1 |
-| apt | linux-image-azure | 6.17.0-1022.22 | 7.0.0-1017.17~24.04.1 |
-| apt | linux-tools-azure | 6.17.0-1022.22 | 7.0.0-1017.17~24.04.1 |
+| apt | firefox | 158.0+build2-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
 
 ---
 
