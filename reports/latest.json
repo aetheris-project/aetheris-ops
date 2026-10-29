@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "label": "host score",
-  "message": "90/100",
+  "message": "100/100",
   "color": "success",
   "report": {
-    "scan_time": "2026-10-28 10:33:35 UTC",
-    "hostname": "runnervmtai0g",
+    "scan_time": "2026-10-29 10:52:49 UTC",
+    "hostname": "runnervm48cm3",
     "platform": "Linux",
-    "score": 90,
-    "grade": "B",
+    "score": 100,
+    "grade": "A",
     "optimizations": [
       {
         "id": "ip-forward",
@@ -23,50 +23,13 @@
         "title": "Swappiness above recommended range",
         "detail": "vm.swappiness is 60. Values 10-30 are typical for database and web workloads.",
         "fix": "sysctl -w vm.swappiness=10"
-      },
-      {
-        "id": "thp",
-        "severity": "warning",
-        "title": "Transparent Huge Pages set to always",
-        "detail": "THP in 'always' mode can cause latency spikes on database and virtualized workloads.",
-        "fix": "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"
       }
     ],
     "pending_updates": [
       {
         "package": "firefox",
-        "current": "157.0+build1-0ubuntu0.24.04.1~mt1",
+        "current": "158.0.1+build1-0ubuntu0.24.04.1~mt1",
         "available": "1:1snap1-0ubuntu5",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-azure",
-        "current": "6.17.0-1022.22",
-        "available": "7.0.0-1017.17~24.04.1",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-cloud-tools-azure",
-        "current": "6.17.0-1022.22",
-        "available": "7.0.0-1017.17~24.04.1",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-headers-azure",
-        "current": "6.17.0-1022.22",
-        "available": "7.0.0-1017.17~24.04.1",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-image-azure",
-        "current": "6.17.0-1022.22",
-        "available": "7.0.0-1017.17~24.04.1",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-tools-azure",
-        "current": "6.17.0-1022.22",
-        "available": "7.0.0-1017.17~24.04.1",
         "manager": "apt"
       }
     ]
