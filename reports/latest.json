@@ -4,8 +4,8 @@
   "message": "100/100",
   "color": "success",
   "report": {
-    "scan_time": "2026-11-02 12:22:19 UTC",
-    "hostname": "runnervm48cm3",
+    "scan_time": "2026-11-03 11:54:53 UTC",
+    "hostname": "runnervmnwato",
     "platform": "Linux",
     "score": 100,
     "grade": "A",
@@ -28,8 +28,8 @@
     "pending_updates": [
       {
         "package": "firefox",
-        "current": "158.0.1+build1-0ubuntu0.24.04.1~mt1",
-        "available": "1:1snap1-0ubuntu5",
+        "current": "158.0.1+build1-0ubuntu0.26.04.1~mt1",
+        "available": "1:1snap1-0ubuntu9.1",
         "manager": "apt"
       }
     ]

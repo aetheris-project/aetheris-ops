@@ -1,10 +1,10 @@
 # Aetheris host report
 
-Scan time: 2026-11-02 12:22:19 UTC
+Scan time: 2026-11-03 11:54:53 UTC
 
 ## Host
 
-- Hostname: `runnervm48cm3`
+- Hostname: `runnervmnwato`
 - Platform: `Linux 7.0.0-1017-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
@@ -25,7 +25,7 @@ Scan time: 2026-11-02 12:22:19 UTC
 
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
-| apt | firefox | 158.0.1+build1-0ubuntu0.24.04.1~mt1 | 1:1snap1-0ubuntu5 |
+| apt | firefox | 158.0.1+build1-0ubuntu0.26.04.1~mt1 | 1:1snap1-0ubuntu9.1 |
 
 ---
 
