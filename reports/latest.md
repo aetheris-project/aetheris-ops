@@ -1,14 +1,14 @@
 # Aetheris host report
 
-Scan time: 2026-11-04 12:06:24 UTC
+Scan time: 2026-11-05 12:18:53 UTC
 
 ## Host
 
-- Hostname: `runnervmwuk1x`
-- Platform: `Linux 7.0.0-1019-azure` (`x86_64`)
+- Hostname: `ip-10-0-137-197`
+- Platform: `Linux 7.0.0-1014-aws` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
-- Python: 3.12.16
+- Python: 3.12.15
 
 ## Score
 
@@ -25,7 +25,7 @@ Scan time: 2026-11-04 12:06:24 UTC
 
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
-| apt | firefox | 159.0+build1-0ubuntu0.26.04.1~mt1 | 1:1snap1-0ubuntu9.1 |
+| apt | firefox | 158.0+build2-0ubuntu0.26.04.1~mt1 | 1:1snap1-0ubuntu9.1 |
 
 ---
 
