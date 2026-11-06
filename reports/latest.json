@@ -4,8 +4,8 @@
   "message": "100/100",
   "color": "success",
   "report": {
-    "scan_time": "2026-11-05 12:18:53 UTC",
-    "hostname": "ip-10-0-137-197",
+    "scan_time": "2026-11-06 12:05:31 UTC",
+    "hostname": "runnervmwuk1x",
     "platform": "Linux",
     "score": 100,
     "grade": "A",
@@ -28,7 +28,7 @@
     "pending_updates": [
       {
         "package": "firefox",
-        "current": "158.0+build2-0ubuntu0.26.04.1~mt1",
+        "current": "159.0+build1-0ubuntu0.26.04.1~mt1",
         "available": "1:1snap1-0ubuntu9.1",
         "manager": "apt"
       }
