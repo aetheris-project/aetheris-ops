@@ -4,8 +4,8 @@
   "message": "100/100",
   "color": "success",
   "report": {
-    "scan_time": "2026-11-18 13:01:10 UTC",
-    "hostname": "runnervmccnms",
+    "scan_time": "2026-11-19 13:03:14 UTC",
+    "hostname": "runnervm0hi8g",
     "platform": "Linux",
     "score": 100,
     "grade": "A",
@@ -30,36 +30,6 @@
         "package": "firefox",
         "current": "160.0+build1-0ubuntu0.26.04.1~mt1",
         "available": "1:1snap1-0ubuntu9.1",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-azure",
-        "current": "7.0.0-1019.20",
-        "available": "7.0.0-1020.21",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-cloud-tools-azure",
-        "current": "7.0.0-1019.20",
-        "available": "7.0.0-1020.21",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-headers-azure",
-        "current": "7.0.0-1019.20",
-        "available": "7.0.0-1020.21",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-image-azure",
-        "current": "7.0.0-1019.20",
-        "available": "7.0.0-1020.21",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-tools-azure",
-        "current": "7.0.0-1019.20",
-        "available": "7.0.0-1020.21",
         "manager": "apt"
       }
     ]

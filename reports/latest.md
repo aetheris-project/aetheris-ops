@@ -1,11 +1,11 @@
 # Aetheris host report
 
-Scan time: 2026-11-18 13:01:10 UTC
+Scan time: 2026-11-19 13:03:14 UTC
 
 ## Host
 
-- Hostname: `runnervmccnms`
-- Platform: `Linux 7.0.0-1019-azure` (`x86_64`)
+- Hostname: `runnervm0hi8g`
+- Platform: `Linux 7.0.0-1020-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
 - Python: 3.12.16
@@ -26,11 +26,6 @@ Scan time: 2026-11-18 13:01:10 UTC
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
 | apt | firefox | 160.0+build1-0ubuntu0.26.04.1~mt1 | 1:1snap1-0ubuntu9.1 |
-| apt | linux-azure | 7.0.0-1019.20 | 7.0.0-1020.21 |
-| apt | linux-cloud-tools-azure | 7.0.0-1019.20 | 7.0.0-1020.21 |
-| apt | linux-headers-azure | 7.0.0-1019.20 | 7.0.0-1020.21 |
-| apt | linux-image-azure | 7.0.0-1019.20 | 7.0.0-1020.21 |
-| apt | linux-tools-azure | 7.0.0-1019.20 | 7.0.0-1020.21 |
 
 ---
 
