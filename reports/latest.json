@@ -4,8 +4,8 @@
   "message": "100/100",
   "color": "success",
   "report": {
-    "scan_time": "2026-11-27 13:50:31 UTC",
-    "hostname": "ip-10-0-132-176",
+    "scan_time": "2026-11-28 12:58:02 UTC",
+    "hostname": "runnervm3lb7s",
     "platform": "Linux",
     "score": 100,
     "grade": "A",
@@ -28,26 +28,8 @@
     "pending_updates": [
       {
         "package": "firefox",
-        "current": "160.0+build1-0ubuntu0.26.04.1~mt1",
+        "current": "160.0.1+build1-0ubuntu0.26.04.1~mt1",
         "available": "1:1snap1-0ubuntu9.1",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-aws",
-        "current": "7.0.0-1016.17",
-        "available": "7.0.0-1017.18",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-headers-aws",
-        "current": "7.0.0-1016.17",
-        "available": "7.0.0-1017.18",
-        "manager": "apt"
-      },
-      {
-        "package": "linux-image-aws",
-        "current": "7.0.0-1016.17",
-        "available": "7.0.0-1017.18",
         "manager": "apt"
       }
     ]

@@ -1,11 +1,11 @@
 # Aetheris host report
 
-Scan time: 2026-11-27 13:50:31 UTC
+Scan time: 2026-11-28 12:58:02 UTC
 
 ## Host
 
-- Hostname: `ip-10-0-132-176`
-- Platform: `Linux 7.0.0-1016-aws` (`x86_64`)
+- Hostname: `runnervm3lb7s`
+- Platform: `Linux 7.0.0-1020-azure` (`x86_64`)
 - Uptime: 0.0 hours
 - CPU cores: 4
 - Python: 3.12.16
@@ -25,10 +25,7 @@ Scan time: 2026-11-27 13:50:31 UTC
 
 | Manager | Package | Current | Available |
 | --- | --- | --- | --- |
-| apt | firefox | 160.0+build1-0ubuntu0.26.04.1~mt1 | 1:1snap1-0ubuntu9.1 |
-| apt | linux-aws | 7.0.0-1016.17 | 7.0.0-1017.18 |
-| apt | linux-headers-aws | 7.0.0-1016.17 | 7.0.0-1017.18 |
-| apt | linux-image-aws | 7.0.0-1016.17 | 7.0.0-1017.18 |
+| apt | firefox | 160.0.1+build1-0ubuntu0.26.04.1~mt1 | 1:1snap1-0ubuntu9.1 |
 
 ---
 
